@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Audio index{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <h1>Audio index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>AudioName</th>
+                <th>AudioSize</th>
+                <th>AudioSize</th>
+                {#<th>UpdatedAt</th>#}
+                <th>Audio</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for audio in audios %}
+            {{ dump(vich_uploader_asset(audio, 'audioFile')) }}
+            <tr>
+                <td>{{ audio.id }}</td>
+                <td>{{ audio.description }}</td>
+                <td>{{ audio.audioName }}</td>
+                <td>{{ audio.audioSize }}</td>
+                {#<td>{{ audio.updatedAt ? audio.updatedAt|date('Y-m-d H:i:s') : '' }}</td>#}
+                <td>
+                    <audio id="myAudio">
+                        <source src="{{ vich_uploader_asset(audio, 'audioFile') }}" type="audio/ogg">
+                        <source src="{{ vich_uploader_asset(audio, 'audioFile') }}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                </td>
+                <td>
+                    <a href="{{ path('audio_show', {'id': audio.id}) }}">show</a>
+                    <a href="{{ path('audio_edit', {'id': audio.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('audio_new') }}">Create new</a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,178 @@
+easy_admin:
+    site_name: 'Anesaroudine France.'
+    design:
+
+        menu:
+          -  label: "Annonce"
+             children:
+                 - { entity: Annonce, label: "Liste des Annonces", icon: "th-list"}
+                 - { entity: Annonce, label: "Ajouter Annonce", icon: "plus", params: {action: 'new'}}
+          -  label: "Dahira"
+             children:
+                 - { entity: Dahiratou1, label: "Liste des dahiras", icon: "th-list"}
+                 - { entity: Dahiratou1, label: "Liste des dahiras", icon: "plus", params: {action: 'new'}}
+          -  label: "Programmes"
+             children:
+                 - { entity: Programmes, label: "Listes des Programmes", icon: "th-list"}
+                 - { entity: Programmes, label: "Ajouter Programmes", icon: "plus", params: {action: 'new'}}
+          -  label: "Utilisateur"
+             children:
+                 - { entity: User, label: "Liste des utilisateurs", icon: "th-list"}
+                 - { entity: User, label: "Ajouter Utilisateur", icon: "plus", params: {action: 'new'}}
+
+          -  label: "Audio"
+             children:
+                 - { entity: Audio, label: "Liste des audios", icon: "th-list"}
+                 - { entity: Audio, label: "Ajouter audio", icon: "plus", params: {action: 'new'}}
+
+          -  label: "Category Audio"
+             children:
+                 - { entity: Categorya, label: "Liste des categories audio", icon: "th-list"}
+                 - { entity: Categorya, label: "Ajouter categories", icon: "plus", params: {action: 'new'}}
+          -  label: "Evenement ou publcités"
+             children:
+                 - { entity: Event, label: "Liste des évenements", icon: "th-list"}
+                 - { entity: Event, label: "Ajouter un nouvel évenement", icon: "plus", params: {action: 'new'}}
+
+          -  label: "Photo"
+             children:
+                 - { entity: Photo, label: "Album photo", icon: "th-list"}
+                 - { entity: Photo, label: "Ajouter nouvelle album", icon: "plus", params: {action: 'new'}}
+          -  label: "Albums"
+             children:
+                 - { entity: Categoryp, label: "Album photo", icon: "th-list"}
+                 - { entity: Categoryp, label: "Ajouter nouvelle album", icon: "plus", params: {action: 'new'}}
+          -  label: "Albums vidéo"
+             children:
+                 - { entity: Categoryv, label: "Album vidéo", icon: "th-list"}
+                 - { entity: Categoryv, label: "Ajouter nouvelle album", icon: "plus", params: {action: 'new'}}
+          - label: "Vidéo"
+            children:
+                - { entity: Video, label: "Liste des Annonces", icon: "th-list"}
+                - { entity: Video, label: "Ajouter Annonce", icon: "plus", params: {action: 'new'}}
+          - label: "Email"
+            children:
+                - { entity: Email, label: "Liste des Email", icon: "th-list"}
+                - { entity: Email, label: "Liste des Emails", icon: "plus", params: {action: 'new'}}
+
+
+
+    entities:
+
+        Categoryp:
+            class: App\Entity\Categoryp
+            Label: "Categoryp"
+            form:
+              fields:
+                - name
+
+
+        Event:
+            class: App\Entity\Event
+            Label: "Evenement"
+            form:
+              fields:
+                - libele
+                - imageFile
+                - { property: 'imageFile', type: 'vich_image', label: 'Photo' }
+                - date
+                - lieu
+                - description
+        Photo:
+            class: App\Entity\Photo
+            Label: "Photo"
+            form:
+              fields:
+                - name
+                - imageFile
+                - { property: 'imageFile', type: 'vich_image', label: 'Photo' }
+                - category
+                - { property: 'category', label: 'Albums'}
+
+        Annonce:
+            class: App\Entity\Annonce
+            Label: "Annonce"
+            form:
+              fields:
+                - name
+                - imageFile
+                - { property: 'imageFile', type: 'vich_image' }
+                - date
+                - description
+
+              show:
+                - name
+                - imageFile
+                - { property: 'imageFile',type: 'vich_image', base_path: '/images/annonce' }
+                - date
+                - description
+
+              list:
+                collapse_actions: true
+                actions: ['show', 'edit', 'delete']
+                batch_actions: ['delete']
+                title: "Some posts from the other world"
+                fields: ['name', 'date', 'description', {property: 'image', type: 'image', base_path: '/images/annonce'}]
+
+
+        Audio:
+            class: App\Entity\Audio
+            Label: "Audio"
+            form:
+              fields:
+                - audioFile
+                - { property: 'audioFile', type: 'vich_file' }
+                - categoriea
+                - description
+
+              show:
+                fields:
+                  - description
+                  - categoriea
+                  - { property: 'categoriea', type: 'text', label: 'Catégorie' }
+                  - description
+                  - audioFile
+                  - {property: 'thumbnail', type: 'image', base_path: '/images/audio'}
+        Video:
+            class: App\Entity\Video
+            Label: "Video"
+            form:
+              fields:
+                - name
+                - description
+                - videoFile
+                - { property: 'videoFile', type: 'vich_file'}
+                - categoryv
+                - { property: 'categoryv', type_options: { required: true } }
+
+        Categorya:
+            class: App\Entity\Categorya
+            Label: "Audio"
+            form:
+              fields:
+                - name
+        Categoryv:
+            class: App\Entity\Categoryv
+            Label: "Video"
+            form:
+              fields:
+                - name
+        Email:
+          class: App\Entity\Email
+          Label: "Email"
+        User:
+          class: App\Entity\User
+          Label: "Utilisateur"
+        Dahiratou1:
+          class: App\Entity\Dahiratou1
+          Label: "Dahiratou1"
+        Programmes:
+          class: App\Entity\Programmes
+          Label: "Programmes"
+
+
+
+
+
+
+

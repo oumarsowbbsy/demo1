@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+ {% block title %}Audio Category{% endblock %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('styleaudio') }}
+{% endblock %}
+
+{% block body %}
+
+    <br>
+<div class="container">
+    <div class="row">
+        {% for audio in audios %}
+         {% if category1 == audio.categoriea.id  %}
+          {% set audio1 = vich_uploader_asset(audio, 'audioFile') %}
+        <div class="col-md-4">
+            <div class="card mb-4 ">
+                <div class="card-body">
+                    {{ audio.audioName }}
+
+                    <audio  id="audio1" controls>
+                        <source src="{{ audio1 }}" >
+                    </audio>
+
+                </div>
+            </div>
+        </div>
+
+          {% endif %}
+        {% endfor %}
+    </div>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('scriptaudio') }}
+{% endblock %}

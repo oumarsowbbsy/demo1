@@ -1,0 +1,149 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HomePage{% endblock %}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('styleprojet') }}
+        {{ encore_entry_link_tags('styleaudio') }}
+
+    {% endblock %}
+{% block body %}
+    <div class="container">
+    {% block flash_messages %}
+        {% for type, messages in app.session.flashbag.all() %}
+            {% for message in messages %}
+                <div class="alert alert-{{ type }} alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    {{ message | raw }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endblock %}
+{#		<test></test>#}
+    </div>
+    			<div role="main" class="main">
+				<div class="slider-container rev_slider_wrapper" style="height: 670px;">
+					<div id="revolutionSlider" class="slider rev_slider" data-version="5.4.8" data-plugin-revolution-slider data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 670, 'disableProgressBar': 'on', 'responsiveLevels': [4096,1200,992,500], 'parallax': { 'type': 'scroll', 'origo': 'enterpoint', 'speed': 1000, 'levels': [2,3,4,5,6,7,8,9,12,50], 'disable_onmobile': 'on' }, 'navigation' : {'arrows': { 'enable': true }, 'bullets': {'enable': true, 'style': 'bullets-style-1', 'h_align': 'center', 'v_align': 'bottom', 'space': 7, 'v_offset': 70, 'h_offset': 0}}}">
+						<ul>
+                        {% for event in events %}
+							<li data-transition="fade">
+								<img src="{{vich_uploader_asset(event, 'imageFile')}}"  
+									alt=""
+									data-bgposition="center center" 
+									data-bgfit="cover" 
+									data-bgrepeat="no-repeat" 
+									class="rev-slidebg">
+				
+								<div class="tp-caption tp-resizeme rs-parallaxlevel-7"
+								    data-frames='[{"delay":2500,"speed":1500,"frame":"0","from":"opacity:0;x:-50%;y:-50%;","to":"opacity:1;x:0;y:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+								    data-type="image" 
+								    data-x="-500"
+								    data-y="-700"
+								    data-width="['auto']"
+								    data-height="['auto']"
+								    data-basealign="slide"><img src="assets/img/slides/slide-parallax-porto-symbol.png" alt=""></div>
+				
+								<div class="tp-caption"
+									data-x="center" data-hoffset="['-150','-150','-150','-240']"
+									data-y="center" data-voffset="['-50','-50','-50','-75']"
+									data-start="1000"
+									data-transform_in="x:[-300%];opacity:0;s:500;"
+									data-transform_idle="opacity:0.2;s:500;"><img src="assets/img/slides/slide-title-border.png" alt=""></div>
+				
+								<div class="tp-caption text-color-light font-weight-normal"
+									data-x="center"
+									data-y="center" data-voffset="['-50','-50','-50','-75']"
+									data-start="700"
+									data-fontsize="['22','22','22','40']"
+									data-lineheight="['25','25','25','45']"
+									data-transform_in="y:[-50%];opacity:0;s:500;">{{ event.date ? event.date|date('d-m-Y') : '' }} &nbsp;</div>
+				
+								<div class="tp-caption d-none d-md-block"
+									data-frames='[{"delay":2400,"speed":500,"frame":"0","from":"opacity:0;x:10%;","to":"opacity:1;x:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-x="center" data-hoffset="['80','80','80','135']"
+									data-y="center" data-voffset="['-33','-33','-33','-55']"><img src="assets/img/slides/slide-blue-line.png" alt=""></div>
+				
+								<div class="tp-caption"
+									data-x="center" data-hoffset="['150','150','150','240']"
+									data-y="center" data-voffset="['-50','-50','-50','-75']"
+									data-start="1000"
+									data-transform_in="x:[300%];opacity:0;s:500;"
+									data-transform_idle="opacity:0.2;s:500;"><img src="assets/img/slides/slide-title-border.png" alt=""></div>
+				
+								<div class="tp-caption font-weight-extra-bold text-color-light negative-ls-2"
+									data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:1.5;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-x="center"
+									data-y="center"
+									data-fontsize="['50','50','50','90']"
+									data-lineheight="['55','55','55','95']">{{ event.libele }}</div>
+				
+								<div class="tp-caption font-weight-light"
+									data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":2000,"split":"chars","splitdelay":0.05,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+									data-x="center"
+									data-y="center" data-voffset="['40','40','40','80']"
+									data-fontsize="['18','18','18','50']"
+									data-lineheight="['20','20','20','55']"
+									style="color: #b5b5b5;">{{ event.description }}</div>
+							</li>
+                            {% endfor %}
+						</ul>
+					</div>
+				</div>
+                <div class="home-intro bg-primary" id="home-intro">
+					<div class="container">
+				
+						<div class="row align-items-center">
+							<div class="col-lg-8">
+								<p>
+									The fastest way to grow your business with the leader in <span class="highlighted-word">Technology</span>
+									<span>Check out our options and features included.</span>
+								</p>
+							</div>
+							<div class="col-lg-4">
+								<div class="get-started text-left text-lg-right">
+									<a href="#" class="btn btn-dark btn-lg text-3 font-weight-semibold px-4 py-3">Get Started Now</a>
+									<div class="learn-more">or <a href="index.html">learn more.</a></div>
+								</div>
+							</div>
+						</div>
+				
+					</div>
+				</div>
+
+    <div class="container">
+        <h1 class="my-4">Annonce</h1>
+        <hr class="my-4">
+
+        <div class="row">
+            {% for annonce in annonces %}
+						<div class="col-md-6 col-lg-4 mb-5 mb-lg-0 appear-animation pad" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
+							<div class="card flip-card flip-card-3d text-center rounded-0">
+								<div class="flip-front p-5">
+									<div class="flip-content my-4">
+										<h1 class="font-weight-bold text-color-primary text-4">{{ annonce.name }}</h1>
+										<p>{{ annonce.description }}</p>
+{#										<p>{{ annonce.description | truncate(100) }}</p>	#}
+									</div>
+								</div>
+								<div class="flip-back d-flex align-items-center p-5" style="background-image: url({{ vich_uploader_asset(annonce, 'imageFile') }}); background-size: cover; background-position: center;">
+									<div class="flip-content my-4">
+										<h4 class="font-weight-bold text-color-light text-5">{{ annonce.name }}</h4>
+										<p class="font-weight-light text-color-light opacity-5" style="color:transparent !important;">{{ annonce.description }}</p>
+{#										<p class="font-weight-light text-color-light opacity-5" style="color:transparent !important;">{{ annonce.description | truncate(100) }}</p>#}
+										<a href="{{ path('annonce_show', {'id': annonce.id}) }}" class="btn btn-primary btn-modern text-color-light font-weight-bold"> En Savoir Plus </a>
+									</div>
+								</div>
+							</div>
+						</div>
+            {% endfor %}
+        </div>
+    </div>
+    <div>
+
+    </div>
+    </div>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('scriptpresentation') }}
+{% endblock %}

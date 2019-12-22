@@ -1,0 +1,48 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        darse:
+            uri_prefix: images/darse
+            upload_destination: '%kernel.project_dir%/public/images/darse'
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+            namer: Vich\UploaderBundle\Naming\OrignameNamer
+        photos:
+            uri_prefix: images/photos
+            upload_destination: '%kernel.project_dir%/public/images/photos'
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+            namer: Vich\UploaderBundle\Naming\OrignameNamer
+        photosCategory:
+            uri_prefix: images/category
+            upload_destination: '%kernel.project_dir%/public/images/category'
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+            namer: Vich\UploaderBundle\Naming\OrignameNamer
+        audios:
+            uri_prefix: images/audio
+            upload_destination: '%kernel.project_dir%/public/images/audio'
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+
+
+        videos:
+            uri_prefix: images/videos
+            upload_destination: '%kernel.project_dir%/public/images/videos'
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+            namer: Vich\UploaderBundle\Naming\OrignameNamer
+
+        annonce:
+            uri_prefix: images/annonce
+            upload_destination: '%kernel.project_dir%/public/images/annonce'
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+            namer: Vich\UploaderBundle\Naming\OrignameNamer

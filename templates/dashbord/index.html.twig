@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DashbordController!{% endblock %}
+
+{% block body %}
+    <br>
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col">
+     <div class="card bg-primary text-white mb-3 text-center">
+       <div class="card-body">
+         <div class="row">
+            <div class="col-4">
+             <i class="fas fa-users fa-3x"></i>
+            </div>
+          <div class="col-8">
+           <h4 class="card-title">{{ users }} Utilisateurs Inscription</h4>
+
+          </div>
+         </div>
+       </div>
+     </div>
+   </div>
+     <div class="col">
+     <div class="card bg-dark text-white mb-3 text-center">
+       <div class="card-body">
+         <div class="row">
+            <div class="col-4">
+             <i class="	fa fa-bullhorn fa-3x"></i>
+            </div>
+          <div class="col-8">
+           <h4 class="card-title">{{annonces}} Annonces dans votre platforms</h4>
+          </div>
+         </div>
+       </div>
+     </div>
+   </div>
+     <div class="col">
+     <div class="card bg-warning text-white mb-3 text-center">
+       <div class="card-body">
+         <div class="row">
+            <div class="col-4">
+             <i class="fa fa-file-audio-o fa-3x"></i>
+            </div>
+          <div class="col-8">
+           <h4 class="card-title">{{ audios }} Audios dans </h4>
+          </div>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
+     <div class="row">
+         <div class="col">
+             <div class="card bg-info text-white mb-3 text-center">
+                 <div class="card-body">
+                     <div class="row">
+                         <div class="col-4">
+                             <i class="fa fa-calendar fa-3x"></i>
+                         </div>
+                         <div class="col-8">
+                             <h4 class="card-title">{{ events }} Evenements </h4>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="col">
+             <div class="card bg-danger text-white mb-3 text-center">
+                 <div class="card-body">
+                     <div class="row">
+                         <div class="col-4">
+                             <i class="fa fa-file-picture-o fa-3x"></i>
+                         </div>
+                         <div class="col-8">
+                             <h4 class="card-title">{{ photos }} Photos</h4>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="col">
+             <div class="card bg-secondary text-white mb-3 text-center">
+                 <div class="card-body">
+                     <div class="row">
+                         <div class="col-4">
+                             <i class="	fa fa-file-video-o fa-3x"></i>
+                         </div>
+                         <div class="col-8">
+                             <h4 class="card-title">{{ videos }} Videos </h4>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+{% endblock %}

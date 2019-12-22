@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/vendor/fontawesome-free/css/all.min.css">
+		<link rel="stylesheet" href="assets/vendor/animate/animate.min.css">
+		<link rel="stylesheet" href="assets/vendor/simple-line-icons/css/simple-line-icons.min.css">
+		<link rel="stylesheet" href="assets/vendor/owl.carousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/vendor/owl.carousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.min.css">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="assets/css/theme.css">
+		<link rel="stylesheet" href="assets/css/theme-elements.css">
+		<link rel="stylesheet" href="assets/css/theme-blog.css">
+		<link rel="stylesheet" href="assets/css/theme-shop.css">
+
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="assets/vendor/rs-plugin/css/settings.css">
+		<link rel="stylesheet" href="assets/vendor/rs-plugin/css/layers.css">
+		<link rel="stylesheet" href="assets/vendor/rs-plugin/css/navigation.css">
+		<link rel="stylesheet" href="assets/vendor/circle-flip-slideshow/css/component.css">
+		
+		<!-- Demo CSS -->
+
+
+		<!-- Skin CSS -->
+		<link rel="stylesheet" href="assets/css/skins/default.css"> 
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Head Libs -->
+		<script src="assets/vendor/modernizr/modernizr.min.js"></script>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('styleprojet') }}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="body">
+			<header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 148, 'stickySetTop': '-148px', 'stickyChangeLogo': true}">
+				<div class="header-body border-color-primary border-top-0 box-shadow-none">
+
+					<div class="header-top header-top-default border-bottom-0 border-top-0">
+						<div class="container">
+							<div class="header-row py-2">
+								<div class="header-column justify-content-start">
+									<div class="header-row">
+                                        <nav class="header-nav-top">
+											<ul class="nav nav-pills text-uppercase text-2">
+												<li class="nav-item nav-item-anim-icon">
+													<a class="nav-link pl-0" href="#"><i class="fas fa-angle-right"></i> Se Connecter </a>
+												</li>
+												<li class="nav-item nav-item-anim-icon">
+													<a class="nav-link" href="#"><i class="fas fa-angle-right"></i> S'inscrire </a>
+												</li>
+											</ul>
+										</nav>
+                                    </div>
+                                </div>
+                                <div class="header-column justify-content-end">
+									<div class="header-row">
+										<ul class="header-social-icons social-icons d-none d-sm-block social-icons-clean">
+											<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+											<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+											<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+										</ul>
+									</div>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-container container z-index-2">
+						<div class="header-row py-2">
+							<div class="header-column">
+								<div class="header-row">
+									<div class="header-logo header-logo-sticky-change">
+										<a href="{{ path('home') }}">
+											<img class="header-logo-sticky opacity-0" alt="Ansaroudine Logo" width="100" height="48" data-sticky-width="89" data-sticky-height="43" data-sticky-top="88" src="assets/img/logoanesaroudine.png">
+											<img class="header-logo-non-sticky opacity-0" alt="Ansaroudine Logo" width="100" height="48" src="assets/img/logoanesaroudine.png">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="header-column justify-content-end">
+								<div class="header-row">
+									<ul class="header-extra-info d-flex align-items-center">
+										<li class="d-none d-sm-inline-flex">
+											<div class="header-extra-info-text">
+												<label>NOUS ENVOYER UN MAIL</label>
+												<strong><a href="mailto:mail@example.com">MAIL@EXAMPLE.COM</a></strong>
+											</div>
+										</li>
+										<li>
+											<div class="header-extra-info-text">
+												<label>NOUS APPELER </label>
+												<strong><a href="tel:8001234567">800-123-4567</a></strong>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+                    					<div class="header-nav-bar bg-success" data-sticky-header-style="{'minResolution': 991}" data-sticky-header-style-active="{'background-color': 'transparent'}" data-sticky-header-style-deactive="{'background-color': '#0088cc'}">
+						<div class="container">
+							<div class="header-row">
+								<div class="header-column">
+									<div class="header-row justify-content-end">
+										<div class="header-nav header-nav-force-light-text justify-content-start py-2 py-lg-3" data-sticky-header-style="{'minResolution': 991}" data-sticky-header-style-active="{'margin-left': '110px'}" data-sticky-header-style-deactive="{'margin-left': '0'}">
+											<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1">
+												<nav class="collapse">
+													<ul class="nav nav-pills" id="mainNav">
+														<li class="dropdown dropdown-full-color dropdown-light">
+															<a class="dropdown-item" href="{{ path('home') }}">
+																Accueil
+															</a>
+														</li>
+														<li class="dropdown dropdown-full-color dropdown-light dropdown-mega">
+															<a class="dropdown-item " href="{{ path('presentation') }}">
+																A Propos de Nous 
+															</a>
+														</li>
+														<li class="dropdown dropdown-full-color dropdown-light">
+															<a class="dropdown-item dropdown-toggle" href="#">
+																Mediathéque
+															</a>
+                                                            <ul class="dropdown-menu">
+																<li>
+																	<a class="dropdown-item" href="{{ path('media') }}">
+																		Galerie Photos
+																	</a>
+																</li>
+                                                                <li>
+																	<a class="dropdown-item" href="{{ path('media') }}">
+																		Vidéothéque
+																	</a>
+																</li>
+                                                                <li>
+																	<a class="dropdown-item" href="{{ path('media') }}">
+																		Audiothéque
+																	</a>
+																</li>
+                                                            </ul>
+														</li>
+														<li class="dropdown dropdown-full-color dropdown-light">
+															<a class="dropdown-item" href="{{ path('contact') }}">
+																Contact
+															</a>
+														</li>
+														{% if app.user %}
+														{% if is_granted('ROLE_ADMIN') %}
+														<li class="dropdown dropdown-full-color dropdown-light">
+															<a class="dropdown-item" href="{{ path('easyadmin') }}">
+																Interface d'administration
+															</a>
+														</li>
+														<li class="dropdown dropdown-full-color dropdown-light">
+															<a class="dropdown-item" href="{{ path('email') }}">
+																Interface Send Mail
+															</a>
+														</li>
+															//fos_user_security_logout
+														{% endif %}
+
+															<li class="dropdown dropdown-full-color dropdown-light">
+																<a class="dropdown-item" href="{{ path('fos_user_security_logout') }}">
+																	Se déconnecter
+																</a>
+															</li>
+														{% endif %}
+													</ul>
+												</nav>
+											</div>
+											<button class="btn header-btn-collapse-nav my-2" data-toggle="collapse" data-target=".header-nav-main nav">
+												<i class="fas fa-bars"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </header>
+        
+        {% block body %}
+        
+        {% endblock %}
+                    <!-- Footer Debut !-->
+			<footer id="footer">
+				<div class="footer-copyright">
+					<div class="container py-2">
+						<div class="row py-4">
+							<div class="col text-center">
+								<ul class="footer-social-icons social-icons social-icons-clean social-icons-icon-light mb-3">
+									<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+									<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
+								<p><strong> ANESAROUDINE FRANCE </strong> - © Copyright 2020. Tous Droits Réservés.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+            </div>
+            <!-- Footer Fin!-->
+        {% block javascripts %}{% endblock %}
+        		<!-- Vendor -->
+		<script src="assets/vendor/jquery/jquery.min.js"></script>
+		<script src="assets/vendor/jquery.appear/jquery.appear.min.js"></script>
+		<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+		<script src="assets/vendor/jquery.cookie/jquery.cookie.min.js"></script>
+		<script src="assets/vendor/popper/umd/popper.min.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/vendor/common/common.min.js"></script>
+		<script src="assets/vendor/jquery.validation/jquery.validate.min.js"></script>
+		<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+		<script src="assets/vendor/jquery.gmap/jquery.gmap.min.js"></script>
+		<script src="assets/vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+		<script src="assets/vendor/isotope/jquery.isotope.min.js"></script>
+		<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+		<script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script src="assets/vendor/vide/jquery.vide.min.js"></script>
+		<script src="assets/vendor/vivus/vivus.min.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="assets/js/theme.js"></script>
+		
+		<!-- Current Page Vendor and Views -->
+		<script src="assets/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script src="assets/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- Current Page Vendor and Views -->
+		<script src="assets/js/views/view.contact.js"></script>
+		
+		<!-- Theme Custom -->
+		<script src="assets/js/custom.js"></script>
+		
+		<!-- Theme Initialization Files -->
+		<script src="assets/js/theme.init.js"></script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+{
+  "entrypoints": {
+    "scriptproject": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~scriptaudio~scriptpresentation~scriptproject.js",
+        "/build/scriptproject.js"
+      ]
+    },
+    "scriptaudio": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~scriptaudio~scriptpresentation~scriptproject.js",
+        "/build/scriptaudio.js"
+      ]
+    },
+    "styleprojet": {
+      "js": [
+        "/build/runtime.js",
+        "/build/styleprojet.js"
+      ],
+      "css": [
+        "/build/styleprojet.css"
+      ]
+    },
+    "stylepresentation": {
+      "js": [
+        "/build/runtime.js",
+        "/build/stylepresentation.js"
+      ],
+      "css": [
+        "/build/stylepresentation.css"
+      ]
+    },
+    "stylelogin": {
+      "js": [
+        "/build/runtime.js",
+        "/build/stylelogin.js"
+      ],
+      "css": [
+        "/build/stylelogin.css"
+      ]
+    },
+    "styleaudio": {
+      "js": [
+        "/build/runtime.js",
+        "/build/styleaudio.js"
+      ],
+      "css": [
+        "/build/styleaudio.css"
+      ]
+    },
+    "scriptpresentation": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~scriptaudio~scriptpresentation~scriptproject.js",
+        "/build/vendors~scriptpresentation.js",
+        "/build/scriptpresentation.js"
+      ]
+    }
+  }
+}

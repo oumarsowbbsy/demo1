@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dahira Controller{% endblock %}
+
+{% block body %}
+
+        <div role="main" class="main">
+
+				<!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.75769374048!2d2.27701965694365!3d48.858950681492054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1sfr!2ssn!4v1575979321051!5m2!1sfr!2ssn" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+				<div class="container">
+
+					<div class="row py-4">
+						<div class="col-lg-6">
+
+							<div class="overflow-hidden mb-1">
+								<h2 class="font-weight-normal text-7 mt-2 mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200"><strong class="font-weight-extra-bold">Contacter</strong> Nous</h2>
+							</div>
+							<div class="overflow-hidden mb-4 pb-3">
+								<p class="mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Feel free to ask for details, don't save any questions!</p>
+							</div>
+                                {{ form_start(form) }}
+								<div class="form-row">
+									<div class="form-group col-lg-6">
+										{{ form_row(form.firstname) }}
+									</div>
+									<div class="form-group col-lg-6">
+										{{ form_row(form.lastname) }}
+									</div>
+                                    <div class="form-group col-lg-6">
+										{{ form_row(form.phone) }}
+									</div>
+									<div class="form-group col-lg-6">
+										{{ form_row(form.email) }}
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col">
+										{{ form_rest(form) }}
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col">
+										<input type="submit" value="Envoyer le message" class="btn btn-primary btn-modern btn-block" data-loading-text="Loading...">
+									</div>
+								</div>
+                                 {{ form_end(form) }}
+						</div>
+						<div class="col-lg-6">
+
+							<div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
+								<h4 class="pt-5"> Restons en <strong>Contact</strong></h4>
+							<p class="lead mb-0 text-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <br>
+                                <ul class="list list-icons list-icons-style-2 mt-2">
+									<li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark">Adresse:</strong> 1234 Street Name, City Name, United States</li>
+									<li><i class="fas fa-phone top-6"></i> <strong class="text-dark">Téléphone:</strong> (123) 456-789</li>
+									<li><i class="fas fa-envelope top-6"></i> <strong class="text-dark">Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
+								</ul>
+								
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('scriptproject') }}
+{% endblock %}

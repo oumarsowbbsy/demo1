@@ -1,0 +1,16 @@
+{
+  "build/runtime.js": "/build/runtime.js",
+  "build/scriptaudio.js": "/build/scriptaudio.js",
+  "build/scriptpresentation.js": "/build/scriptpresentation.js",
+  "build/scriptproject.js": "/build/scriptproject.js",
+  "build/styleaudio.css": "/build/styleaudio.css",
+  "build/styleaudio.js": "/build/styleaudio.js",
+  "build/stylelogin.css": "/build/stylelogin.css",
+  "build/stylelogin.js": "/build/stylelogin.js",
+  "build/stylepresentation.css": "/build/stylepresentation.css",
+  "build/stylepresentation.js": "/build/stylepresentation.js",
+  "build/styleprojet.css": "/build/styleprojet.css",
+  "build/styleprojet.js": "/build/styleprojet.js",
+  "build/vendors~scriptaudio~scriptpresentation~scriptproject.js": "/build/vendors~scriptaudio~scriptpresentation~scriptproject.js",
+  "build/vendors~scriptpresentation.js": "/build/vendors~scriptpresentation.js"
+}

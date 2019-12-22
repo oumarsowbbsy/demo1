@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Video!{% endblock %}
+
+{% block body %}
+    <br>
+    <div class="container">
+        <div class="row">
+   {% for videoc in categoryvideo %}
+       <div class="card" style="width: 18rem;">
+           <div class="card-body">
+               <h3 class="card-title">{{ videoc.name }}</h3>
+               <a href="{{ path('video_album', {'category_id': videoc.id}) }}" class="btn btn-success">consulter nos vidéos</a>
+           </div>
+       </div>
+    {% endfor %}
+        </div>
+    </div>
+    <br>
+{% endblock %}

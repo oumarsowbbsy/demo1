@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TestController!{% endblock %}
+
+{% block body %}
+    <br>
+    <div class="container">
+    <div class="row">
+  {% for event in photos %}
+      <div class="col-md-4">
+                  <div class="card mb-4 ">
+                      <div class="card-body">
+                          {#<img class="img-thumbnail" src="{{ vich_uploader_asset(event, 'imageFile') }}" style="width:100% !important;">#}
+                          <div class="card-body">
+                              <h5 class="card-text">{{ event.name }}</h5>
+                              <a href="{{ path('album_photo', {'category_id': event.id}) }}" class="btn btn-dark">consulter album</a>
+                          </div>
+                      </div>
+                  </div>
+      </div>
+
+    {% endfor %}
+
+    </div>
+    </div>
+
+{% endblock %}

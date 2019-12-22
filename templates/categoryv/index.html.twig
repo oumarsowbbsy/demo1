@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categoryv index{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <h1>Categoryv index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for categoryv in categoryvs %}
+            <tr>
+                <td>{{ categoryv.id }}</td>
+                <td>{{ categoryv.name }}</td>
+                <td>
+                    <a href="{{ path('categoryv_show', {'id': categoryv.id}) }}">show</a>
+                    <a href="{{ path('categoryv_edit', {'id': categoryv.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('categoryv_new') }}">Create new</a>
+    </div>
+{% endblock %}

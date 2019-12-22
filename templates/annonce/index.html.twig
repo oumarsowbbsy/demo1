@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Annonce{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        {% for annonce in annonces %}
+            <tr>
+                <td>{{ annonce.id }}</td>
+                <td>{{ annonce.name }}</td>
+                <td>{{ annonce.description }}</td>
+                <td>{{ annonce.imageName }}</td>
+                <td>{{ annonce.imageSize }}</td>
+                {#<td>{{ annonce.updatedAt ? annonce.updatedAt|date('Y-m-d H:i:s') : '' }}</td>#}
+                <td>{{ annonce.date ? annonce.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('annonce_show', {'id': annonce.id}) }}">show</a>
+                    <a href="{{ path('annonce_edit', {'id': annonce.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('annonce_new') }}">Create new</a>
+    </div>
+{% endblock %}

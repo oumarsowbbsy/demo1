@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Audio1Controller!{% endblock %}
+
+{% block body %}
+    <br>
+    <div class="container">
+        <div class="row">
+            {% for audioC in categories %}
+                <div class="col-md-4">
+                    <div class="card mb-4 ">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <h5 class="card-text">{{ audioC.name }}</h5>
+                                <a href="{{ path('bibliotheque_audio', {'category_id': audioC.id}) }}" class="btn btn-dark">consulter album</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}

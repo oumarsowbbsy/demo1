@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %} Profil Utilisateur {% endblock %}
+
+{% block body %}
+    <br>
+       <div class="d-flex justify-content-center">
+    <div class="card" style="width: 36rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ users.username }}</h5>
+            <h5 class="card-text">{{ users.email }}</h5>
+            <h5 class="card-text">{{ users.adresse }}</h5>
+            <h5 class="card-text">{{ users.telephone }}</h5>
+            <a href="{{ path('profil') }}" class="btn btn-primary">Modifier</a>
+        </div>
+    </div>
+       </div>
+    <br>
+{% endblock %}

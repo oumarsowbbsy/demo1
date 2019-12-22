@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Category Audio{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Create new Categorya</h1>
+
+        {{ include('categorya/_form.html.twig') }}
+
+        <a href="{{ path('categorya_index') }}">back to list</a>
+    </div>
+{% endblock %}

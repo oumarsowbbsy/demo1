@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Photo index{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <h1>Photo index</h1>
+    <a href="{{ path('photo_new') }}">Create new</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>ImageName</th>
+                <th>ImageSize</th>
+                <th>UpdatedAt</th>
+                <th>category</th>
+                <th>Photo</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for photo in photos %}
+            <tr>
+                <td>{{ photo.id }}</td>
+                <td>{{ photo.name }}</td>
+                <td>{{ photo.name }}</td>
+                <td>{{ photo.imageName }}</td>
+                <td>{{ photo.imageSize }}</td>
+                <td>{{ photo.categories.name }}</td>
+                {#<td><img src="{{ vich_uploader_asset(photo, 'imageFile') }}" class="img-thumbnail"/></td>#}
+                <td><img src="../{{ vich_uploader_asset(photo, 'imageFile') }}" class="img-thumbnail"/></td>
+                <td></td>
+                <td>
+                    <a href="{{ path('photo_show', {'id': photo.id}) }}">show</a>
+                    <a href="{{ path('photo_edit', {'id': photo.id}) }}">edit</a>
+                </td>
+            </tr>
+
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endblock %}

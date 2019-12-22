@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MediaController!{% endblock %}
+
+{% block body %}
+    <br>
+  <div class="container">
+       <div class="row">
+           <div class="col">
+      <div class="card">
+          <h5 class="card-header bg-success">Audio</h5>
+          <div class="card-body">
+              <div class="embed-responsive embed-responsive-16by9">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/QSJxZmjsu5I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="{{ path('audio1') }}" class="btn btn-success">Consulter Audio</a>
+          </div>
+      </div>
+       </div>
+      <br>
+           <div class="col">
+      <div class="card">
+          <h5 class="card-header bg-success">Vidéo</h5>
+          <div class="card-body">
+              <div class="embed-responsive embed-responsive-16by9">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/QSJxZmjsu5I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="{{ path('video_c') }}" class="btn btn-success">Consulter Vidéo</a>
+          </div>
+      </div>
+       </div>
+      <br>
+           <div class="col">
+      <div class="card">
+          <h5 class="card-header bg-success">Photo</h5>
+          <div class="card-body">
+              <img src="https://cdn.pixabay.com/photo/2019/11/20/17/42/vancouver-4640671__340.jpg" class="card-img-top" alt="...">
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="{{ path('album') }}" class="btn btn-success" >Consulter nos albums photos</a>
+          </div>
+      </div>
+       </div>
+       </div>
+      <br>
+  </div>
+{% endblock %}
