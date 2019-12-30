@@ -1,52 +1,46 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Annonce{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <br>
-
-{#                <img src="{{ vich_uploader_asset(annonce, 'imageFile') }}" alt="">#}
-{#                {{ annonce.name }}#}
-
-{#                {{ annonce.description }}#}
-
-{#                {{ annonce.imageName }}#}
-
-{#                {{ annonce.imageSize }}#}
-
-
-{#            {{ annonce.date ? annonce.date|date('d-m-Y H:i:s') : '' }}#}
-
-
-        <!-- Card -->
-        <div class="card card-cascade wider reverse">
-
-            <!-- Card image -->
-            <div class="view view-cascade overlay">
-                <img class="card-img-top" src="{{ vich_uploader_asset(annonce, 'imageFile') }}" height="400px" alt="Card image cap">
-                <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-            </div>
-
-            <!-- Card content -->
-            <div class="card-body card-body-cascade text-center">
-
-                <!-- Title -->
-                <h4 class="card-title"><strong>{{ annonce.name }}</strong></h4>
-                <!-- Subtitle -->
-                <!-- Text -->
-                <p class="card-text">{{ annonce.description }}</p>
-                <a href="{{ path('home') }}" class="btn btn-success"> Retourner à la page d'accueil<a/>
-
-            </div>
-
-        </div>
-        <!-- Card -->
-
-
-    </div>
-    <br>
 
 {% endblock %}
+
+{#{% extends 'base.html.twig' %}#}
+
+{#{% block title %}Annonce{% endblock %}#}
+
+{#{% block body %}#}
+{#    <div class="container">#}
+{#        <br>#}
+{#        <!-- Card -->#}
+{#        <div class="card card-cascade wider reverse">#}
+
+{#            <!-- Card image -->#}
+{#            <div class="view view-cascade overlay">#}
+{#                <img class="card-img-top" src="{{ vich_uploader_asset(annonce, 'imageFile') }}" height="400px" alt="Card image cap">#}
+{#                <a href="#!">#}
+{#                    <div class="mask rgba-white-slight"></div>#}
+{#                </a>#}
+{#            </div>#}
+
+{#            <!-- Card content -->#}
+{#            <div class="card-body card-body-cascade text-center">#}
+
+{#                <!-- Title -->#}
+{#                <h4 class="card-title"><strong>{{ annonce.name }}</strong></h4>#}
+{#                <!-- Subtitle -->#}
+{#                <!-- Text -->#}
+{#                <p class="card-text">{{ annonce.description }}</p>#}
+{#                <a href="{{ path('home') }}" class="btn btn-success"> Retourner à la page d'accueil<a/>#}
+
+{#            </div>#}
+
+{#        </div>#}
+{#        <!-- Card -->#}
+
+
+{#    </div>#}
+{#    <br>#}
+
+{#{% endblock %}#}
